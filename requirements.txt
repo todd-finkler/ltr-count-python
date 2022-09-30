@@ -1,0 +1,23 @@
+# pip install cmake
+cmake==3.18.0
+
+# Python Linting for dev env
+pylint==2.5.3
+
+# Unittests
+xmlrunner==1.7.7
+
+# Python performance
+astar_python
+
+# Networking
+cryptography
+flask
+django
+
+# Python 
+numpy
+pandas
+scipy
+sklearn
+matplotlib
