@@ -2,6 +2,7 @@
 import math
 import numpy as np
 import matplotlib.pyplot as plt
+from pyparsing import alphanums
 
 # initiate list for counts
 lettercount = [0]*(26*5)
@@ -31,7 +32,14 @@ for tot in lettertotcount:
 for ltrperc in lettercount:
     letterposperc[lettercount.index(ltrperc)] = (ltrperc/(lettertotcount[lettercount.index(ltrperc) % 26]))*100
 
-xpoints = np.array([0,25])
+ind = np.arange(26)
+alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+plt.xlabel('Frequency')
+plt.ylabel('Letter')
+plt.title('Frequencies of letters in 5-Letter words')
+plt.xticks(ind, alpha)
+plt.yticks(np.arange(0, 10, 1))
+plt.bar(alpha, lettertotperc)
+plt.savefig('frequency.png')
 
-plt.plot(xpoints, lettertotcount)
 
