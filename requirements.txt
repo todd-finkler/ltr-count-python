@@ -16,7 +16,7 @@ flask
 django
 
 # Python 
-numpy
+numpy==1.23.3
 pandas
 scipy
 sklearn
